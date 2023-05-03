@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="about.css">
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> 
+    <!-- custom js -->
+<!-- <script src="script.js"></script>-->
+    <title>ServicesPage</title>
+</head>
+<body>
+
+    <header class = "header">
+        <a href="#" class="logo services">Our Services <i class='bx bx-laptop'></i></a>
+        <i class='bx bx-menu' id="menu-icon"></i>
+        
+
+        <nav class="navbar">
+            <a href="index.html" class="active">Home</a>
+            <a href="#web">Web Development</a>
+            <a href="#mobile">Mobil Development</a>
+            <a href="#backend">BackEnd Development</a>
+            
+        </nav>
+        
+    </header>
+
+
+    <section class="home" id="web">
+        <div class="home-content">
+            <h3>Web <span> Development</span></h3>
+            <h1>Html/Css/JavaScript</h1>
+            
+            <p>Using html, css and javascript languages, I deliver your projects quickly, in line with your wishes and most importantly, safely.</p>
+            <p style="margin-top: 1rem;">Follow Me On GitHub And Linkedin</p>
+            <a href="https://github.com/ZeusS60" class="btn" style="margin-top: 2rem;">
+                Example Projects
+            </a>
+            
+
+            <div class="social-media">
+                <a href="https://github.com/ZeusS60"><i class='bx bxl-github' ></i></a>
+               
+                <a href="https://www.linkedin.com/in/h%C3%BCseyin-pala-89962b21b/"><i class='bx bxl-linkedin' ></i></a>
+            </div>
+        
+           
+
+
+        </div>
+
+        <div class="home-img">
+            <img src="images/html.jpg" alt="s">
+        </div>
+    </section>
+
+    <!--Mobile Development-->
+    <section class="about" id="mobile">
+        <div class="about-img slide-frame">
+            <div class="image-container">
+                <img src="images/Flutter.jpg" alt="">
+            </div>
+            <div class="image-container">
+                <img src="images/mobile.jpg" alt="">
+            </div>
+        </div>
+        <div class="about-content">
+            <h2 class="heading">
+               Flutter<span> Development</span>
+            </h2>
+            <h3>Just Like You Imagine</h3>
+            <p>
+                My Flutter adventure started when the company I did my internship during my internship made mobile application development for us with flutter, and I've been trying to improve myself in flutter since that day.
+In this language, where I have about 6 months of project development and learning experience, I can make simple and advanced projects with database connection in a plain and understandable way.
+Due to the short experience I gained while doing the projects I did at the advanced level, it takes me a little longer to complete the project.
+
+<p>I will continue to improve myself by continuing to do new projects in this language that I am still developing. You can find sample projects below.</p>
+            </p>
+
+            <a href="https://github.com/ZeusS60" class="btn">
+                Example Projects
+            </a>
+
+
+            <div class="social-media">
+                <a href="https://github.com/ZeusS60"><i class='bx bxl-github' ></i></a>
+                <a href="https://www.linkedin.com/in/h%C3%BCseyin-pala-89962b21b/"><i class='bx bxl-linkedin' ></i></a>
+            </div>
+            
+        </div>
+        
+</section>
+
+
+<section class="home" id="backend">
+    <div class="about-img">
+        <img src="images/Java.jpg" alt="">
+    </div>
+    <div class="about-content">
+        <h2 class="heading">
+            Java<span> BackEnd</span>
+        </h2>
+        <h3>Keep Your Back Strong </h3>
+        <p>
+            My backend adventure with Java started with the desire to make a project with a backend for myself during my internship period, and since then I have been developing myself with my springboot training with java and adding a backend structure to my projects.
+            
+        </p>
+        <p>We aim to move myself further in this field with new projects. Follow me on my GitHub account to follow my projects or to be informed.</p>
+        <a href="https://github.com/ZeusS60" class="btn">
+            Example Projects
+        </a>
+        <div class="social-media">
+        <a href="https://github.com/ZeusS60"><i class='bx bxl-github' ></i></a>
+        <a href="https://www.linkedin.com/in/h%C3%BCseyin-pala-89962b21b/"><i class='bx bxl-linkedin' ></i></a>
+    </div>
+        
+    </div>
+    
+</section>
+
+
+
+<footer class="footer">
+    <div class="footer-text">
+        <p>Copyright &copy; 2023 by Hüseyin | All Rights Reserved.</p>
+    </div>
+    <div class="footer-iconTop">
+        <a href="#web"><i class='bx bx-up-arrow-alt'></i></a>
+    </div>
+</footer>
+
+<script>
+
+   let section = document.querySelectorAll('section');
+   let navLinks = document.querySelectorAll('header nav a');
+
+    window.onscroll = () => {
+        
+        section.forEach(sec =>{
+            let top = window.scrollY;
+            let offset = sec.offsetTop;
+            let height = sec.offsetHeight;
+            let id = sec.getAttribute('id');
+
+            if(top >= offset && top < offset + height){
+                navLinks.forEach(links =>{
+                    links.classList.remove('active');
+                    document.querySelector('header nav a[href*=' + id +']').classList.add('active');
+
+                });
+            }
+
+        });
+    };
+
+</script>
+    
+
+    
+</body>
+</html>

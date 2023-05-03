@@ -1,0 +1,46 @@
+.about-img img{  
+    box-shadow: 1px 8px var(--main-color);
+    margin-left: 5rem;
+    width: 35vw;
+    animation: floatImage 4s ease-in-out infinite;
+    
+}
+
+#education{
+    display: none;
+}
+
+@keyframes floatImage {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-2.4rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.header .services {
+    animation: floatColor 4s ease-in-out infinite;
+}
+
+@keyframes floatColor {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(-1.4rem);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+
